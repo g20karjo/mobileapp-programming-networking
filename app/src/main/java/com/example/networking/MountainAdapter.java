@@ -39,7 +39,7 @@ public class MountainAdapter extends RecyclerView.Adapter<MountainAdapter.Mounta
 
         public MountainAdapterViewHolder(@NonNull View itemView) {
             super(itemView);
-            mountain_name = itemView.findViewById(R.id.mountain_name);
+            mountain_name = itemView.findViewById(R.id.Mountain_Name);
         }
     }
 }
