@@ -8,6 +8,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.Arrays;
+import java.util.List;
+
 @SuppressWarnings("FieldCanBeLocal")
 public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
 
@@ -22,8 +25,10 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         setContentView(R.layout.activity_main);
         new JsonTask(this, this).execute(JSON_FILE);
 
+        List<String> Mountain = Arrays.asList(
+
         recyclerView=findViewById(R.id.recycler_view);
-        MountainAdapter mountainAdapter = new MountainAdapter(mountains);
+        MountainAdapter mountainAdapter = new MountainAdapter(Mountain);
         recyclerView.setAdapter(mountainAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
     }
