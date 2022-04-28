@@ -8,7 +8,7 @@ Det första som gjordes var att implementera en recyclerview. Det gjordes igenom
     />
 ```
 inuti `activity_main.xml` den fick även ett ID. Det skapades även `list_item.xml` där det är vad
-RecyclerViewen visar per objekt.RecyclerViewen
+RecyclerViewen visar per objekt.
 
 ```
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
