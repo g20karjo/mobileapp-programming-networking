@@ -22,7 +22,7 @@ import java.util.Scanner;
 public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
 
     private final String JSON_URL = "https://mobprog.webug.se/json-api?login=brom";
-    private final String JSON_FILE = "mountains.json";
+    // private final String JSON_FILE = "mountains.json";
 
     private RecyclerView recyclerView;
 
@@ -30,10 +30,10 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        new JsonFile(this, this).execute(JSON_FILE);
+        //new JsonFile(this, this).execute(JSON_FILE);
+        new JsonTask(this,this).execute(JSON_URL);
 
-        JSONArray mountains = new JSONArray();
-        List<String> Mountain = Arrays.asList("json");
+        List<String> Mountain = Arrays.asList();
 
         recyclerView=findViewById(R.id.recycler_view);
         MountainAdapter mountainAdapter = new MountainAdapter(Mountain);
