@@ -11,10 +11,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class MountainAdapter extends RecyclerView.Adapter<MountainAdapter.MountainAdapterViewHolder> {
-    private List<String> Mountain;
+    private List<Mountains> Mountains;
 
-    public MountainAdapter(List<String> Mountain) {
-        this.Mountain = Mountain;
+    public MountainAdapter(List<Mountains> Mountains) {
+        this.Mountains = Mountains;
     }
 
     @NonNull
@@ -26,12 +26,12 @@ public class MountainAdapter extends RecyclerView.Adapter<MountainAdapter.Mounta
 
     @Override
     public void onBindViewHolder(@NonNull MountainAdapterViewHolder holder, int position) {
-        holder.mountain_name.setText(Mountain.get(position));
+        holder.mountain_name.setText(Mountains.get(position).getName());
     }
 
     @Override
     public int getItemCount() {
-        return Mountain.size();
+        return Mountains.size();
     }
 
     public class MountainAdapterViewHolder extends RecyclerView.ViewHolder {
